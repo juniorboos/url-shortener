@@ -5,6 +5,9 @@ export const Container = styled.div`
   height: 80px;
   padding: 0 10rem;
   position: fixed;
+  z-index: 1;
+
+  background-color: ${props => props.theme.colors.primary.white};
 
   display: flex;
   align-items: center;

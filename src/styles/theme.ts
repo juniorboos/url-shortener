@@ -14,6 +14,10 @@ const theme = {
       grayishViolet: 'hsl(257, 7%, 63%)',
       darkBlue: 'hsl(255, 11%, 22%)',
       darkViolet: 'hsl(260, 8%, 14%)'
+    },
+    background: {
+      white: '#FFF',
+      gray: '#e8e8e8'
     }
   }
 }

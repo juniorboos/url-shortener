@@ -8,7 +8,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.colors.primary.white};
+    background: ${props => props.theme.colors.background.white};
     color: ${props => props.theme.colors.neutral.grayishViolet};
     font: 500 18px Poppins, sans-serif;
   }
