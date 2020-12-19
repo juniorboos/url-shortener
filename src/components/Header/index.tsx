@@ -1,18 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { Container } from '../../styles/components/header'
+import { Container, Info } from '../../styles/components/header'
+import Shortener from '../Shortener'
 
 const Header: React.FC = () => {
   return (
     <Container>
-      <div>
+      <Info>
         <h1>More than just shorter links</h1>
         <p>
           Build your brand's recognition and get detailed insights on how your
           links are performing
         </p>
-      </div>
+      </Info>
       <button>Get Started</button>
+      <Shortener />
     </Container>
   )
 }

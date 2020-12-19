@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import HeaderIllustration from '../../assets/illustration-working.svg'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 80vh;
   padding: 0 10rem;
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -13,23 +14,6 @@ export const Container = styled.div`
   background: url(${HeaderIllustration}) no-repeat;
   background-position: right 50%;
   background-size: 50% auto;
-
-  div {
-    width: 50%;
-    margin-bottom: 16px;
-  }
-
-  div > * {
-    margin: 0.5rem 0;
-  }
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    line-height: 5rem;
-    letter-spacing: -0.05em;
-    color: ${props => props.theme.colors.neutral.darkBlue};
-  }
 
   button {
     background-color: ${props => props.theme.colors.primary.cyan};
@@ -41,5 +25,22 @@ export const Container = styled.div`
     color: ${props => props.theme.colors.primary.white};
     font-weight: 700;
     font-size: 1rem;
+  }
+`
+
+export const Info = styled.div`
+  width: 49%;
+  margin-bottom: 16px;
+
+  * {
+    margin: 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 5rem;
+    letter-spacing: -0.05em;
+    color: ${props => props.theme.colors.neutral.darkBlue};
   }
 `
