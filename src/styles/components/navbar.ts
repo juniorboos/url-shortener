@@ -13,7 +13,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  div {
+  .links,
+  .sign {
     height: 100%;
 
     display: flex;
@@ -22,20 +23,27 @@ export const Container = styled.div`
     font-size: 14px;
   }
 
-  a {
+  .menu {
+    display: none;
+  }
+
+  .links a,
+  .sign a {
     text-decoration: none;
     color: ${props => props.theme.colors.neutral.grayishViolet};
   }
 
-  a:hover {
+  .links a:hover,
+  .sign a:hover {
     color: ${props => props.theme.colors.neutral.darkBlue};
   }
 
-  div > *:not(:last-child) {
+  .links > *:not(:last-child),
+  .sign > *:not(:last-child) {
     margin-right: 1.5rem;
   }
 
-  button {
+  .sign button {
     background-color: ${props => props.theme.colors.primary.cyan};
     border: none;
     border-radius: 30px;
@@ -49,11 +57,14 @@ export const Container = styled.div`
 
   @media (max-width: 425px) {
     padding: 0 1.5rem;
-    border: 1px solid red;
 
-    a,
-    button {
+    .links a,
+    .sign {
       display: none;
+    }
+
+    .menu {
+      display: block;
     }
   }
 `
