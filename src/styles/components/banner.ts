@@ -11,6 +11,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 
   background: url(${background}) no-repeat
     ${props => props.theme.colors.primary.violet};
@@ -31,5 +32,9 @@ export const Container = styled.div`
     color: ${props => props.theme.colors.primary.white};
     font-weight: 700;
     font-size: 1rem;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 1.5rem;
   }
 `

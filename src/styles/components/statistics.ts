@@ -9,8 +9,12 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-
+  overflow-x: hidden;
   background-color: ${props => props.theme.colors.background.gray};
+
+  @media (max-width: 425px) {
+    padding: 140px 1.5rem 0;
+  }
 `
 
 export const Header = styled.div`
@@ -45,6 +49,19 @@ export const CardsContainer = styled.div`
     width: 100%;
     z-index: 0;
   }
+
+  @media (max-width: 425px) {
+    margin: 6rem 0;
+    flex-direction: column;
+
+    hr {
+      top: 0;
+      left: 50%;
+      right: 50%;
+      height: 100%;
+      width: 0;
+    }
+  }
 `
 export const Card = styled.div`
   border-radius: 10px;
@@ -72,6 +89,21 @@ export const Card = styled.div`
   p {
     font-size: 14px;
   }
+
+  @media (max-width: 425px) {
+    text-align: center;
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 100px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 100px;
+    }
+  }
 `
 export const IconContainer = styled.div`
   margin-top: -40px;
@@ -86,4 +118,8 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 425px) {
+    margin: -40px auto 20px;
+  }
 `

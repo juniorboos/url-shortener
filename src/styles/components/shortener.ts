@@ -46,4 +46,29 @@ export const Container = styled.div`
     outline: none;
     border-radius: 10px;
   }
+
+  @media (max-width: 425px) {
+    margin: 0 1.5rem;
+    padding: 1.2rem 1.5rem;
+    height: auto;
+
+    background-size: auto 100%;
+
+    form {
+      flex-direction: column;
+    }
+
+    input {
+      margin: 0 0 1rem;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    input,
+    button {
+      border-radius: 5px;
+    }
+  }
 `

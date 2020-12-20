@@ -9,11 +9,19 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
+  overflow-x: hidden;
   background-color: ${props => props.theme.colors.neutral.darkViolet};
 
   img {
     fill: white;
+  }
+
+  @media (max-width: 425px) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
   }
 `
 
@@ -42,6 +50,18 @@ export const Links = styled.div`
   h4 {
     color: ${props => props.theme.colors.primary.white};
     margin-bottom: 12px;
+  }
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 1rem 0;
+
+    div {
+      margin: 16px 0;
+      align-items: center;
+    }
   }
 `
 

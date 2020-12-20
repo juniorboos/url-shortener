@@ -26,6 +26,19 @@ export const Container = styled.div`
     font-weight: 700;
     font-size: 1rem;
   }
+
+  @media (max-width: 425px) {
+    min-height: 110vh;
+    padding: 100px 1.5rem 20vh;
+    background-position: top left;
+    background-size: auto 50%;
+    background-origin: content-box;
+    justify-content: flex-end;
+
+    button {
+      margin: 0 auto;
+    }
+  }
 `
 
 export const Info = styled.div`
@@ -42,5 +55,19 @@ export const Info = styled.div`
     line-height: 5rem;
     letter-spacing: -0.05em;
     color: ${props => props.theme.colors.neutral.darkBlue};
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `

@@ -46,4 +46,14 @@ export const Container = styled.div`
     font-weight: 700;
     font-size: 0.8rem;
   }
+
+  @media (max-width: 425px) {
+    padding: 0 1.5rem;
+    border: 1px solid red;
+
+    a,
+    button {
+      display: none;
+    }
+  }
 `
