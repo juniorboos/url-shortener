@@ -7,7 +7,7 @@ export const Container = styled.div`
   padding: 0 3rem;
 
   position: absolute;
-  bottom: -70px;
+  top: -70px;
   left: 0;
   right: 0;
 
@@ -43,6 +43,14 @@ export const Container = styled.div`
   }
 
   button {
+    background-color: ${props => props.theme.colors.primary.cyan};
+    border: none;
+    width: 150px;
+    padding: 16px;
+
+    color: ${props => props.theme.colors.primary.white};
+    font-weight: 700;
+    font-size: 1rem;
     outline: none;
     border-radius: 10px;
   }

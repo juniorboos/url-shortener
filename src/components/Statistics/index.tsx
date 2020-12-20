@@ -53,7 +53,6 @@ const Statistics: React.FC = () => {
             <p>{card.description}</p>
           </Card>
         ))}
-
         <hr />
       </CardsContainer>
     </Container>

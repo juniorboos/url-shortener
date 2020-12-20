@@ -2,10 +2,12 @@
 import React, { FormEvent, useState } from 'react'
 import { Container } from '../../styles/components/shortener'
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
 
 const Shortener: React.FC = () => {
   const [url, setUrl] = useState('')
   const [loading, setLoading] = useState(false)
+  const dispatch = useDispatch()
 
   const shorten = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -15,6 +17,11 @@ const Shortener: React.FC = () => {
         .post(`https://api.shrtco.de/v2/shorten?url=${url}`)
         .then(response => {
           console.log(response.data.result.short_link)
+          const payload = {
+            original: response.data.result.original_link,
+            short: response.data.result.short_link
+          }
+          dispatch({ type: 'ADD_LINK', payload: payload })
         })
       setLoading(false)
       setUrl('')
