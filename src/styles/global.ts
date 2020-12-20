@@ -12,4 +12,14 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.neutral.grayishViolet};
     font: 500 18px Poppins, sans-serif;
   }
+
+  button {
+    outline:none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    filter: saturate(70%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: scale(1.1);
+  }
 `

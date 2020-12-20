@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 80px;
   padding: 0 10rem;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 
   background-color: ${props => props.theme.colors.primary.white};
 
@@ -20,6 +20,15 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
     font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.neutral.grayishViolet};
+  }
+
+  a:hover {
+    color: ${props => props.theme.colors.neutral.darkBlue};
   }
 
   div > *:not(:last-child) {

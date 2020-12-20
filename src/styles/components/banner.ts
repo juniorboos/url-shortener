@@ -3,7 +3,7 @@ import background from '../../assets/bg-boost-desktop.svg'
 
 export const Container = styled.div`
   width: 100%;
-  height: 20vh;
+  height: 200px;
   padding: 0 10rem;
   position: relative;
 

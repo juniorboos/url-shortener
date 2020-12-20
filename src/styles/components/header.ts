@@ -3,7 +3,7 @@ import HeaderIllustration from '../../assets/illustration-working.svg'
 
 export const Container = styled.div`
   width: 100%;
-  height: 80vh;
+  min-height: 90vh;
   padding: 0 10rem;
   position: relative;
 

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Statistics from '../components/Statistics'
 import Banner from '../components/Banner'
+import Footer from '../components/Footer'
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Header />
       <Statistics />
       <Banner />
+      <Footer />
     </div>
   )
 }

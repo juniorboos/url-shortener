@@ -7,12 +7,12 @@ const Navbar: React.FC = () => {
     <Container>
       <div>
         <img src={logo} alt="" />
-        <p>Features</p>
-        <p>Pricing</p>
-        <p>Resources</p>
+        <a href="">Features</a>
+        <a href="">Pricing</a>
+        <a href="">Resources</a>
       </div>
       <div>
-        <p>Login</p>
+        <a href="">Login</a>
         <button>Sign Up</button>
       </div>
     </Container>
