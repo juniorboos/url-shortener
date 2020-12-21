@@ -3,6 +3,7 @@ import React, { FormEvent, useState } from 'react'
 import { Container } from '../../styles/components/shortener'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
+import ReactLoading from 'react-loading'
 
 const Shortener: React.FC = () => {
   const [url, setUrl] = useState('')
@@ -22,9 +23,9 @@ const Shortener: React.FC = () => {
             short: response.data.result.short_link
           }
           dispatch({ type: 'ADD_LINK', payload: payload })
+          setLoading(false)
+          setUrl('')
         })
-      setLoading(false)
-      setUrl('')
     } catch (err) {
       console.log(err)
       setLoading(false)
@@ -40,7 +41,16 @@ const Shortener: React.FC = () => {
           onChange={e => setUrl(e.target.value)}
         />
         <button type="submit" disabled={loading}>
-          Shorten It!
+          {loading ? (
+            <ReactLoading
+              type="spinningBubbles"
+              color="white"
+              height={20}
+              width={20}
+            />
+          ) : (
+            'Shorten It!'
+          )}
         </button>
       </form>
     </Container>

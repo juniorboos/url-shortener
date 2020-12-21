@@ -48,6 +48,10 @@ export const Container = styled.div`
     width: 150px;
     padding: 16px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: ${props => props.theme.colors.primary.white};
     font-weight: 700;
     font-size: 1rem;
