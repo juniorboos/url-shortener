@@ -38,6 +38,8 @@ const Shortener: React.FC = () => {
           type="text"
           placeholder="Shorten a link here..."
           value={url}
+          title="user input to shorten links"
+          name="shorten a link here"
           onChange={e => setUrl(e.target.value)}
         />
         <button type="submit" disabled={loading}>
